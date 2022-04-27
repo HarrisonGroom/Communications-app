@@ -6,6 +6,40 @@
   </ion-toolbar>
 </ion-header>
 
+<style>
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+  header {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  section {
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+  }
+
+  section:not(.full-width),
+  .full-width > header {
+    padding: 0 10px;
+  }
+ #button{
+   text-align: center;
+ }
+</style>
+
+
+
+
+
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -14,35 +48,36 @@
   </ion-header>
   <section>
     <header>Want</header>
-    <ion-button size="large">Food</ion-button>
-    <ion-button size="large" color="secondary">Bathroom</ion-button>
-    <ion-button size="large" color="tertiary">Where?</ion-button>
+    <ion-button id="button" size="large">Food</ion-button>
+    <ion-button id="button" size="large" color="secondary">Bathroom</ion-button>
+    <ion-button id="button" size="large" color="tertiary">Where?</ion-button>
+    <ion-button id="button" size="large" color="secondary">Bathroom</ion-button>
   </section>
 
   <section>
     <header>Food</header>
-    <ion-button size="large">Success</ion-button>
-    <ion-button size="large">Warning</ion-button>
-    <ion-button size="large">Danger</ion-button>
+    <ion-button id="button" size="large">Success</ion-button>
+    <ion-button id="button" size="large">Warning</ion-button>
+    <ion-button id="button" size="large">Danger</ion-button>
   </section>
 
   <section>
     <header>Large Size</header>
-    <ion-button size="large" color="light">Light</ion-button>
-    <ion-button size="large" color="medium">Medium</ion-button>
-    <ion-button size="large" color="dark">Dark</ion-button>
+    <ion-button id="button" size="large" color="light">Light</ion-button>
+    <ion-button id="button" size="large" color="medium">Medium</ion-button>
+    <ion-button id="button" size="large" color="dark">Dark</ion-button>
   </section>
 
   <section>
     <header>complicated answers</header>
-    <ion-button size="large" color="light">yes i need to go to the bathroom</ion-button>
-    <ion-button size="large" color="medium">No</ion-button>
+    <ion-button id="button" size="large" color="light">yes i need to go to the bathroom</ion-button>
+    <ion-button id="button" size="large" color="medium">No</ion-button>
   </section>
 
   <section>
     <header>Simple answers</header>
-    <ion-button size="large" color="light">yes</ion-button>
-    <ion-button size="large" color="medium">No</ion-button>
+    <ion-button id="button" size="large" color="light">yes</ion-button>
+    <ion-button id="button" size="large" color="medium">No</ion-button>
   </section>
   
 
@@ -74,14 +109,6 @@
       </ion-content>
     </ng-template>
   </ion-popover>
-
-
-
-
-
-
-
-
 
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
