@@ -62,10 +62,14 @@
   </section>
 
   <section>
-    <header>Large Size</header>
-    <ion-button id="button" size="large" color="light">Light</ion-button>
-    <ion-button id="button" size="large" color="medium">Medium</ion-button>
-    <ion-button id="button" size="large" color="dark">Dark</ion-button>
+    <<h4>Alert</h4>
+    <ion-button color="primary" expand="full" (click)="showAlert()">Show Alert</ion-button>
+  
+    <h4>Confirm</h4>
+    <ion-button color="warning" expand="full" (click)="showConfirm()">Show Confirm</ion-button>
+  
+    <h4>Prompt</h4>
+    <ion-button color="danger" expand="full" (click)="showPrompt()">Show Prompt</ion-button>  <code>{{selectedData | json }}</code>
   </section>
 
   <section>
