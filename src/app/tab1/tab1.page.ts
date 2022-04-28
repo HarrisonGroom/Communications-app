@@ -7,10 +7,14 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  selectedData: any;
 
-  constructor( public alertController: AlertController) {}
+  constructor(
+    public alertController: AlertController
+  ) { }
 
-  sshowAlert() {
+
+  showAlert() {
 
     this.alertController.create({
       header: 'Alert',
@@ -29,24 +33,56 @@ export class Tab1Page {
     this.alertController.create({
       header: 'Confirm Alert',
       subHeader: 'Beware lets confirm',
-      message: 'Are you sure? you want to leave without safty mask?',
+      message: 'Simple responses',
       buttons: [
         {
-          text: 'Never',
+          text: 'Yes',
           handler: () => {
             console.log('I care about humanity');
           }
         },
         {
-          text: 'Not Sure',
+          text: 'No',
           handler: () => {
             console.log('Let me think');
           }
         },
         {
-          text: 'Yes!',
+          text: 'Maybe',
           handler: () => {
             console.log('Whatever');
+          }
+        }
+      ]
+    }).then(res => {
+      res.present();
+    });
+  }
+
+  showPrompt() {
+    this.alertController.create({
+      header: 'Prompt Alert',
+      subHeader: 'Enter information requested',
+      message: 'Enter in what you want to say or aks',
+      inputs: [
+        {
+          name: 'Want',
+          placeholder: 'Eg.NY',
+
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: (data: any) => {
+            console.log('Canceled', data);
+          }
+        },
+        {
+          text: 'Done!',
+          handler: (data: any) => {
+            console.log('Saved Information', data);
+            this.selectedData = data;
           }
         }
       ]
